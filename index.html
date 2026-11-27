@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#6f4638">
+<meta name="description" content="كروشيه لين — بلوزات وكارديغان كروشيه بتفاصيل محببة، اختاري تصميمك واحجزيه الآن.">
+<title>كروشيه لين | متجر الكروشيه</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+:root{--brown:#70483b;--cream:#fbf7f1;--pink:#e9c9c6;--ink:#392b27;--muted:#82736d;--line:#eadfd7}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cairo",Tahoma,Arial,sans-serif}
+header{position:sticky;top:0;z-index:10;background:#fffdf9ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top{max-width:1200px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px}.logo{width:46px;height:46px;border-radius:16px;background:var(--brown);color:white;display:grid;place-items:center;font-size:24px}
+.brand h1{font-size:20px;margin:0;color:var(--brown)}.brand small{color:var(--muted);font-size:11px}
+nav{display:flex;gap:6px;flex-wrap:wrap}button,.navbtn{font:inherit;cursor:pointer;border:0;border-radius:12px;padding:9px 13px;background:#f3e9e2;color:var(--brown);font-weight:700}
+button:hover,.navbtn:hover{filter:brightness(.97)}.primary{background:var(--brown);color:white}.ghost{background:white;border:1px solid var(--line)}.danger{background:#fbe8e6;color:#9b3e35}
+main{max-width:1200px;margin:auto;padding:26px 22px 60px}.hero{background:linear-gradient(115deg,#f3e2d9,#f9eee8 55%,#e9d2c8);border-radius:26px;padding:36px;display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:center;overflow:hidden}
+.hero h2{font-size:clamp(28px,4vw,44px);line-height:1.35;margin:0 0 12px;color:#58382f}.hero p{color:#735c52;max-width:560px}.hero-art{font-size:100px;text-align:center;filter:drop-shadow(0 12px 8px #8b665533)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:32px 0 16px}.section-head h2{margin:0;color:var(--brown)}.muted{color:var(--muted);font-size:13px}
+.tools{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0}.tools input,.tools select,.field input,.field textarea,.field select{font:inherit;border:1px solid var(--line);border-radius:12px;background:white;padding:11px 13px;color:var(--ink);min-width:0}
+.tools input{flex:1;min-width:180px}.tools select{min-width:145px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:white;border:1px solid var(--line);border-radius:19px;overflow:hidden;box-shadow:0 5px 18px #5d40350b}
+.photo{height:290px;background:#f0e8e2;position:relative;display:grid;place-items:center;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}.placeholder{font-size:58px;color:#b99a8c}.tag{position:absolute;top:12px;right:12px;background:#fffdf0e8;border-radius:20px;padding:5px 10px;font-size:11px;color:var(--brown)}
+.cardbody{padding:15px}.card h3{margin:0 0 4px;color:var(--brown);font-size:17px}.desc{font-size:12px;color:var(--muted);margin:0 0 12px}
+.field{display:grid;gap:5px;margin:10px 0}.field label{font-size:12px;color:#725f56;font-weight:700}.field input,.field select,.field textarea{width:100%}.field textarea{min-height:80px;resize:vertical}
+.card-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.card-actions button{flex:1}
+.admin-tools{display:none;gap:8px;margin-top:10px;flex-wrap:wrap}.admin .admin-tools{display:flex}.admin .admin-only{display:inline-flex}
+.admin-only{display:none}
+.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:20px;margin:18px 0}.hidden{display:none!important}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.row>*{flex:1}.order{border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0;background:#fffdfb}.status{display:inline-block;padding:4px 10px;border-radius:20px;background:#f5eadf;color:#78513e;font-size:12px;font-weight:700}
+footer{text-align:center;padding:25px;color:var(--muted);border-top:1px solid var(--line);font-size:12px}
+.modal{position:fixed;inset:0;background:#20151188;z-index:30;display:grid;place-items:center;padding:15px}.modalbox{background:white;border-radius:20px;padding:22px;width:min(520px,100%);max-height:90vh;overflow:auto}.modalbox h2{margin-top:0;color:var(--brown)}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr}.hero-art{display:none}}
+@media(max-width:560px){.top{padding:10px 13px}.brand h1{font-size:17px}nav{width:100%;justify-content:space-between}nav button{padding:8px;font-size:12px}main{padding:18px 13px 45px}.hero{padding:23px}.grid{grid-template-columns:1fr 1fr;gap:10px}.photo{height:185px}.cardbody{padding:10px}.card h3{font-size:14px}.card .desc{font-size:10px}.card-actions button{font-size:11px;padding:8px 5px}.field input,.field select{padding:8px;font-size:12px}}
+@media(max-width:370px){.grid{grid-template-columns:1fr}.photo{height:250px}}
+</style></head>
+<body>
+<header><div class="top">
+<div class="brand"><div class="logo">🧶</div><div><h1>كروشيه لين</h1><small>قطعة دافئة… بتفاصيل من القلب</small></div></div>
+<nav>
+<button onclick="showPage('catalog')">الكتالوج</button><button onclick="showPage('orders')">طلباتي</button><button onclick="showPage('contact')">تواصلي معي</button><button onclick="showPage('cart')">🛍️ الحقيبة <span id="cartCount">0</span></button><button class="ghost" onclick="openLogin()">حسابي</button><button class="primary admin-only" onclick="showPage('admin')">👑 لوحة الإدارة</button>
+</nav></div></header>
+<main>
+<section id="catalogPage">
+<div class="hero"><div><h2>اختاري دفءكِ…<br>وخليه كروشيه لين 💗</h2><p>تصاميم كروشيه يدوية بحب واهتمام بالتفاصيل. اختاري الموديل واللون والمقاس، وأرسلي طلب الحجز بسهولة.</p><button class="primary" onclick="document.getElementById('catalog').scrollIntoView({behavior:'smooth'})">تصفحي التصاميم</button></div><div class="hero-art">🧶🤎🌸</div></div>
+<div class="section-head" id="catalog"><div><h2>كتالوج التصاميم</h2><div class="muted">18 تصميماً — الأسعار غير معروضة، والحجز حسب الطلب</div></div></div>
+<div class="tools"><input id="search" placeholder="ابحثي عن موديل..." oninput="renderCatalog()"><select id="category" onchange="renderCatalog()"><option value="">كل الفئات</option><option>كارديغان</option><option>بلوزة</option><option>طقم</option><option>فيست</option></select></div>
+<div class="grid" id="productGrid"></div>
+</section>
+<section id="cartPage" class="hidden"><div class="section-head"><h2>حقيبة الطلبات</h2></div><div id="cartItems"></div><div class="panel"><h3>بيانات الحجز</h3><div class="field"><label>الاسم</label><input id="buyerName" placeholder="اسمكِ الكامل"></div><div class="field"><label>رقم الهاتف</label><input id="buyerPhone" placeholder="07xxxxxxxx" inputmode="tel"></div><div class="field"><label>ملاحظات إضافية</label><textarea id="buyerNote" placeholder="أي تفاصيل حول اللون أو المقاس أو موعد التسليم..."></textarea></div><button class="primary" onclick="submitOrder()">إرسال طلب الحجز</button><p class="muted">إرسال الطلب يسجل الحجز في هذا المتصفح التجريبي فقط.</p></div></section>
+<section id="ordersPage" class="hidden"><div class="section-head"><h2>طلباتي</h2></div><div class="panel"><div class="field"><label>البريد الإلكتروني المستخدم عند الحجز</label><input id="ordersEmail" type="email" placeholder="name@example.com"></div><button class="primary" onclick="renderMyOrders()">عرض طلباتي</button><div id="myOrders"></div></div></section>
+<section id="contactPage" class="hidden"><div class="section-head"><h2>تواصلي معي</h2></div><div class="panel"><p>يسعدني استقبال استفساراتكِ عن المقاسات والألوان والتفاصيل 🌷</p><div class="field"><label>اسمكِ</label><input id="contactName" placeholder="الاسم"></div><div class="field"><label>بريدك الإلكتروني</label><input id="contactEmail" type="email" placeholder="name@example.com"></div><div class="field"><label>رسالتكِ</label><textarea id="contactMessage" placeholder="اكتبي استفسارك هنا..."></textarea></div><button class="primary" onclick="sendMessage()">إرسال الرسالة</button><p class="muted">للتواصل المباشر عبر البريد: <a href="mailto:faez1589@gmail.com">faez1589@gmail.com</a></p></div></section>
+<section id="adminPage" class="hidden"><div class="section-head"><h2>👑 لوحة الإدارة</h2><span class="muted">إدارة التصاميم والطلبات</span></div><div class="panel"><h3>إدارة الطلبات</h3><div id="adminOrders"></div></div><div class="panel"><h3>صور الموديلات والألوان المتاحة</h3><p class="muted">يمكنكِ تغيير صورة كل تصميم وإدارة الألوان المتاحة له.</p><div id="adminProducts"></div></div><div class="panel"><h3>رسائل الزبائن</h3><div id="adminMessages"></div></div><button class="danger" onclick="logout()">تسجيل الخروج من الإدارة</button></section>
+</main>
+<footer>© كروشيه لين — صنع بحب 🧶<br>المتجر التجريبي: البيانات محفوظة محلياً في هذا المتصفح</footer>
+<div id="loginModal" class="modal hidden"><div class="modalbox"><div class="row"><h2>تسجيل الدخول</h2><button class="ghost" style="flex:0" onclick="closeLogin()">✕</button></div><p class="muted">أدخلي بريدك الإلكتروني للمتابعة. حساب الإدارة التجريبي هو البريد المحدد لصاحبة المتجر.</p><div class="field"><label>البريد الإلكتروني</label><input id="loginEmail" type="email" placeholder="name@example.com"></div><button class="primary" onclick="login()">متابعة</button><p class="muted">تسجيل Google وكلمات المرور يحتاجان ربطاً بخدمة مصادقة آمنة عند النشر.</p></div></div>
+<script>
+const ADMIN='faez1589@gmail.com';
+const defaults=[
+['كارديغان القلوب البني','كارديغان','قلوب بيضاء صغيرة على خيط بني دافئ','images/design-01.jpg'],
+['كارديغان الغيوم السماوي','كارديغان','غيوم بيضاء ناعمة على لون سماوي','images/design-02.jpg'],
+['بلوزة الورود الوردية','بلوزة','ورود وردية بارزة على قاعدة كريمية','images/design-03.jpg'],
+['كارديغان المربعات الترابية','كارديغان','ألوان بني وبيج بتنسيق كلاسيكي','images/design-04.jpg'],
+['كارديغان الفراشات','كارديغان','تفاصيل فراشات زرقاء على الأبيض','images/design-05.jpg'],
+['كارديغان الزهور','كارديغان','زهور صغيرة بتدرجات وردية وكريمية','images/design-06.jpg'],
+['كارديغان الكرز','كارديغان','حبات كرز حمراء بتفاصيل خضراء','images/design-07.jpg'],
+['فيست الكرز','فيست','فيست أبيض مزين بحبات الكرز','images/design-08.jpg'],
+['كارديغان الفيونكات','كارديغان','فيونكات وردية لطيفة','images/design-09.jpg'],
+['طقم الكرز','طقم','طقم أبيض بتفاصيل كرز حمراء','images/design-10.jpg'],
+['كارديغان الفراولة','كارديغان','تصميم مرح بتفاصيل الفراولة',''],
+['كارديغان الأناناس','كارديغان','تفاصيل فاكهة صغيرة بلون مشرق',''],
+['كارديغان القلوب الحمراء','كارديغان','قلوب حمراء على خيط كريمي',''],
+['كارديغان الفراولة الوردية','كارديغان','فراولات وردية ناعمة',''],
+['كارديغان البيج الكلاسيكي','كارديغان','تصميم بسيط بلون بيج هادئ',''],
+['كارديغان الضفائر','كارديغان','ضفائر بارزة وأزرار خشبية',''],
+['بلوزة الكرز','بلوزة','بلوزة كريمية بتفاصيل كرز',''],
+['طقم الفراشات الزرقاء','طقم','طقم كريمي بفراشات زرقاء','']
+];
+let products=JSON.parse(localStorage.getItem('cl_products')||'null')||defaults.map((x,i)=>({id:i+1,name:x[0],category:x[1],desc:x[2],image:x[3],colors:['أوف وايت','بني','وردي','سماوي','بيج'],sizes:['S','M','L','قياس مخصص']}));
+let cart=JSON.parse(localStorage.getItem('cl_cart')||'[]'),orders=JSON.parse(localStorage.getItem('cl_orders')||'[]'),messages=JSON.parse(localStorage.getItem('cl_messages')||'[]'),currentEmail=localStorage.getItem('cl_email')||'',isAdmin=currentEmail===ADMIN;
+function save(){localStorage.setItem('cl_products',JSON.stringify(products));localStorage.setItem('cl_cart',JSON.stringify(cart));localStorage.setItem('cl_orders',JSON.stringify(orders));localStorage.setItem('cl_messages',JSON.stringify(messages));}
+function safe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function showPage(p){['catalog','cart','orders','contact','admin'].forEach(x=>document.getElementById(x+'Page').classList.toggle('hidden',x!==p));if(p==='cart')renderCart();if(p==='admin'){if(!isAdmin){alert('هذه الصفحة مخصصة للإدارة');showPage('catalog');return;}renderAdmin();}window.scrollTo(0,0)}
+function renderCatalog(){let q=(document.getElementById('search')?.value||'').toLowerCase(),cat=document.getElementById('category')?.value||'';let arr=products.filter(p=>(p.name+' '+p.desc).toLowerCase().includes(q)&&(!cat||p.category===cat));document.getElementById('productGrid').innerHTML=arr.map(p=>`<article class="card"><div class="photo">${p.image?`<img src="${safe(p.image)}" alt="${safe(p.name)}">`:'<div class="placeholder">🧶</div>'}<span class="tag">${safe(p.category)}</span></div><div class="cardbody"><h3>${safe(p.name)}</h3><p class="desc">${safe(p.desc)}</p><div class="field"><label>اللون</label><select id="color-${p.id}">${p.colors.map(c=>`<option>${safe(c)}</option>`).join('')}</select></div><div class="field"><label>المقاس</label><select id="size-${p.id}">${p.sizes.map(s=>`<option>${safe(s)}</option>`).join('')}</select></div><div class="card-actions"><button class="primary" onclick="addCart(${p.id})">أضيفي للحقيبة</button></div><div class="admin-tools"><label class="navbtn">📸 تغيير الصورة<input type="file" accept="image/*" hidden onchange="changeImage(${p.id},this)"></label><button class="ghost" onclick="editColors(${p.id})">🎨 تعديل الألوان</button></div></div></article>`).join('')||'<p>لا توجد تصاميم مطابقة.</p>'}
+function addCart(id){let p=products.find(x=>x.id===id);cart.push({id,name:p.name,color:document.getElementById('color-'+id).value,size:document.getElementById('size-'+id).value,qty:1});save();updateCount();alert('تمت إضافة التصميم إلى حقيبتكِ 💗')}
+function updateCount(){document.getElementById('cartCount').textContent=cart.reduce((a,x)=>a+x.qty,0)}
+function renderCart(){let el=document.getElementById('cartItems');el.innerHTML=cart.length?cart.map((x,i)=>`<div class="order"><b>${safe(x.name)}</b><p class="muted">اللون: ${safe(x.color)} · المقاس: ${safe(x.size)}</p><div class="row"><label>الكمية <input type="number" min="1" max="10" value="${x.qty}" style="width:70px" onchange="cart[${i}].qty=Math.max(1,+this.value);save();updateCount()"></label><button class="danger" style="flex:0" onclick="cart.splice(${i},1);save();renderCart();updateCount()">إزالة</button></div></div>`).join(''):'<p class="muted">حقيبتكِ فارغة حالياً.</p>'}
+function submitOrder(){if(!cart.length)return alert('أضيفي تصميماً إلى الحقيبة أولاً');let name=document.getElementById('buyerName').value.trim(),phone=document.getElementById('buyerPhone').value.trim();if(!name||!phone)return alert('يرجى إدخال الاسم ورقم الهاتف');if(!currentEmail){openLogin();return alert('سجلي الدخول بالبريد الإلكتروني أولاً حتى تتمكني من متابعة الطلب');}orders.push({id:Date.now(),email:currentEmail,name,phone,note:document.getElementById('buyerNote').value,items:[...cart],status:'قيد العمل',date:new Date().toLocaleDateString('ar')});cart=[];save();updateCount();alert('تم تسجيل طلبكِ في هذا المتصفح التجريبي');showPage('orders');document.getElementById('ordersEmail').value=currentEmail;renderMyOrders()}
+function renderMyOrders(){let e=document.getElementById('ordersEmail').value.trim().toLowerCase();document.getElementById('myOrders').innerHTML=orders.filter(o=>o.email.toLowerCase()===e).map(o=>`<div class="order"><b>طلب رقم ${o.id}</b> <span class="status">${safe(o.status)}</span><p>${o.items.map(i=>safe(i.name)+' — '+safe(i.color)+' / '+safe(i.size)+' × '+i.qty).join('<br>')}</p><small class="muted">${safe(o.date)}</small></div>`).join('')||'<p class="muted">لا توجد طلبات لهذا البريد.</p>'}
+function sendMessage(){let n=contactName.value.trim(),e=contactEmail.value.trim(),m=contactMessage.value.trim();if(!n||!e||!m)return alert('يرجى تعبئة جميع الحقول');messages.push({name:n,email:e,message:m,date:new Date().toLocaleString('ar')});save();contactMessage.value='';alert('تم حفظ رسالتكِ في هذا المتصفح التجريبي. يمكنكِ أيضاً مراسلتنا عبر البريد.')}
+function openLogin(){loginModal.classList.remove('hidden')}function closeLogin(){loginModal.classList.add('hidden')}
+function login(){let e=loginEmail.value.trim().toLowerCase();if(!e||!e.includes('@'))return alert('أدخلي بريداً إلكترونياً صحيحاً');currentEmail=e;isAdmin=e===ADMIN;localStorage.setItem('cl_email',e);document.body.classList.toggle('admin',isAdmin);document.querySelector('.admin-only').style.display=isAdmin?'inline-flex':'none';closeLogin();alert(isAdmin?'مرحباً بكِ في لوحة الإدارة':'تم تسجيل الدخول محلياً');}
+function logout(){currentEmail='';isAdmin=false;localStorage.removeItem('cl_email');document.body.classList.remove('admin');document.querySelector('.admin-only').style.display='none';showPage('catalog')}
+function changeImage(id,input){let f=input.files[0];if(!f)return;let reader=new FileReader();reader.onload=()=>{let im=new Image();im.onload=()=>{let c=document.createElement('canvas'),scale=Math.min(1,1000/im.width);c.width=im.width*scale;c.height=im.height*scale;c.getContext('2d').drawImage(im,0,0,c.width,c.height);products.find(p=>p.id===id).image=c.toDataURL('image/jpeg',.78);save();renderCatalog();renderAdmin();};im.src=reader.result};reader.readAsDataURL(f)}
+function editColors(id){let p=products.find(x=>x.id===id),v=prompt('اكتبي الألوان المتاحة مفصولة بفاصلة، مثال: أوف وايت، بني، وردي',p.colors.join('، '));if(v===null)return;let colors=v.split(/[،,]/).map(x=>x.trim()).filter(Boolean);if(!colors.length)return alert('يجب إضافة لون واحد على الأقل');p.colors=colors;save();renderCatalog();renderAdmin()}
+function renderAdmin(){document.getElementById('adminOrders').innerHTML=orders.map(o=>`<div class="order"><b>${safe(o.name)}</b> · ${safe(o.email)} · ${safe(o.phone)}<p>${o.items.map(i=>safe(i.name)+' / '+safe(i.color)+' / '+safe(i.size)+' × '+i.qty).join('<br>')}</p><span class="status">${safe(o.status)}</span><div class="row" style="margin-top:10px"><button onclick="setStatus(${o.id},'قيد العمل')">🧶 قيد العمل</button><button onclick="setStatus(${o.id},'منتهي')">✅ منتهي</button></div><small class="muted">${safe(o.note||'')}</small></div>`).join('')||'<p class="muted">لا توجد طلبات بعد.</p>';
+document.getElementById('adminProducts').innerHTML=products.map(p=>`<div class="order"><b>${safe(p.name)}</b><p class="muted">الألوان: ${p.colors.map(safe).join('، ')}</p><div class="row"><label class="navbtn">📸 رفع صورة<input type="file" accept="image/*" hidden onchange="changeImage(${p.id},this)"></label><button onclick="editColors(${p.id})">تعديل الألوان</button></div></div>`).join('');
+document.getElementById('adminMessages').innerHTML=messages.map(m=>`<div class="order"><b>${safe(m.name)}</b> · ${safe(m.email)}<p>${safe(m.message)}</p><a href="mailto:${encodeURIComponent(m.email)}?subject=${encodeURIComponent('رد من كروشيه لين')}">الرد عبر البريد</a></div>`).join('')||'<p class="muted">لا توجد رسائل بعد.</p>'}
+function setStatus(id,s){orders.find(o=>o.id===id).status=s;save();renderAdmin()}
+if(isAdmin){document.body.classList.add('admin');document.querySelector('.admin-only').style.display='inline-flex'}renderCatalog();updateCount();
+</script></body></html>
